@@ -57,7 +57,7 @@ def generate(token, grammar, depth):
                 # If depth is too deep, do not recursivly generate code.
                 copy = []
                 for gram in grammar:
-                    if not token in gram:
+                    if not token is gram:
                         copy.append(gram)
                 sentence_structure = random.choice(copy)
             print(sentence_structure)
